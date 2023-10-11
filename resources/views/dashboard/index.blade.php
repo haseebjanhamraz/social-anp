@@ -3,7 +3,7 @@
 @section('content')
 <section class="section">
 <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+  <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                   <div class="card-icon d-flex justify-content-center align-items-center l-bg-purple">
                     <i class="fab fa-facebook-f"></i>
@@ -12,9 +12,9 @@
                     <div class="padding-20">
                       <div class="text-right">
                         <h3 class="font-light mb-0">
-                          <i class="ti-arrow-up text-success"></i>{{$data['facebook']}}
+                        <a href="dashboard/all"><i class="ti-arrow-up text-success"></i>{{$data['facebook']}} </a>
                         </h3>
-                        <span class="text-muted">Posts Received</span>
+                    <span class="text-muted">Posts Received</span>
                       </div>
                     </div>
                   </div>

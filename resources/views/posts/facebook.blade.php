@@ -9,11 +9,12 @@
                     <h4>Facebook Posts</h4>
                   </div>
                   <div class="card-body">
-                    <ul class="nav nav-pills" id="myTab3" role="tablist">
+                  <h5>Top 10 Hashtags</h5>  
+                  <ul class="nav nav-pills" id="myTab3" role="tablist">
                     @foreach($groupedPosts as $index => $tags)
                       <li class="nav-item  ">
                         <a class="nav-link {{$loop->first ? 'active' : ''}}" id="{{ Str::slug($tags[0]) }}-tab" data-toggle="tab" href="#{{ Str::slug($tags[0]) }}" role="tab"
-                          aria-controls="{{ Str::slug($tags[0]) }}" aria-selected="true">{{str_replace('#',' ',$index)}}</a>
+                          aria-controls="{{ Str::slug($tags[0]) }}" aria-selected="true">{{str_replace('#','#',$index)}}</a>
                       </li>
                     @endforeach
                     </ul>
@@ -24,14 +25,17 @@
                      <div class="tab-pane fade {{$loop->first ? 'show active':''}}" id="{{ Str::slug($tags[0])}}" role="tabpanel" aria-labelledby="{{ Str::slug($tags[0]) }}-tab">
                     <div class="row">
                     <div class="col-12">
+                    <h5>Recent 10 Posts</h5> 
                             <table class="table">
                             <thead>
                                 <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">User</th>
+                                <th scope="col">Name</th>
                                 <th scope="col">Avatar</th>
                                 <th scope="col">Post Id</th>
-                                <th scope="col">Message</th>
+                                <th scope="col">Post Content</th>
+                                <th scope="col">Hashtags</th>
+                                <th scope="col">Last Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,7 +47,7 @@
                                 <img alt="image" src="{{$post->user->avatar}}" class="rounded-circle" width="35"
                                     data-toggle="tooltip" title="{{$post->user->name}}">
                                 </td>
-                                <td><a href="https://www.facebook.com/{{$post->userAccount->username}}/posts/{{$post->post_id}}" target="_blank">open Post on Facebook</a></td>
+                                <td><a href="https://www.facebook.com/{{$post->userAccount->username}}/posts/{{$post->post_id}}" target="_blank">{{$post->post_id}}</a></td>
                                 <td>
                                       @if(isset($post->content->message))
                                   {{str_replace('#', '', $post->content->message)}}</td>

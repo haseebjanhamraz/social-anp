@@ -84,7 +84,8 @@ input:checked + .slider:before {
                     <th>Email</th>
                     <th>Avatar</th>
                     <th>Status</th>
-                    <th>Platforms</th>
+                    <th>Accounts</th>
+                    <th>Actions</th>
                 </tr>
 
 

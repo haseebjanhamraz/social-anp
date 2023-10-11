@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
   <!-- Custom style CSS -->
   <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
-  <link rel='shortcut icon' type='image/x-icon' href='{{asset('assets/img/favicon.ico')}}' />
+  <link rel='shortcut icon' type='image/x-icon' href='{{asset('assets/img/anp.png')}}' />
   <link rel="stylesheet" href="{{asset('assets/bundles/pretty-checkbox/pretty-checkbox.min.css')}}">
   @yield('styles')
 </head>
@@ -54,6 +54,12 @@
               <a href="" class="dropdown-item has-icon text-danger" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                 <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+              <a href="" class="dropdown-item has-icon text-danger" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                  <i class="fas fa-sign-out-alt"></i>
                 Logout
               </a>
@@ -67,8 +73,8 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"> <img alt="image" src="{{asset('assets/img/logo.png')}}" class="header-logo" /> <span
-                class="logo-name">Otika</span>
+            <a href="/dashboard"> <img alt="image" src="{{asset('assets/img/anp.png')}}" class="header-logo" /> <span
+                class="logo-name">ANP SMMIS</span>
             </a>
           </div>
           <ul class="sidebar-menu">
